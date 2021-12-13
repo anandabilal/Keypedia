@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    background-color: #4da9be;
+    padding-bottom: 100px;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* NAVBAR */
+nav {
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+nav>a {
+    line-height: 50px;
+    margin-left: 100px;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: black;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 100px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a, nav ul li p {
+    display: block;
+    padding: 0 10px;
+    color: grey;
+    text-decoration: none;
+}
+
+nav ul li .role-name {
+    color: black;
+}
+
+nav>ul>li>a, nav>ul>li>p {
+    line-height: 50px;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 50px;
+    display: none;
+    background: white;
+    border: 1px solid #bebebe;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+    line-height: 35px;
+}
+
+nav ul ul li a {
+    color: black;
+}
+
+nav ul li:hover {
+    background: #bebebe;
+}
+
+nav ul li p:hover {
+    background: white;
+}
+
+nav button {
+    background: none;
+    border: none;
+    display: block;
+    /* Same as line-height in nav ul ul li */
+    line-height: 35px;
+    width: 100%;
+}
+
+nav button a {
+    text-align: left;
+    /* Default font-size is 16px */
+    font-size: 16px;
+}
+
+/* CONTENT */
+/* Login, Register, Add Keyboard, Change Password, Update Keyboard, Keyboard Detail, Transaction History Detail */
+.loginContainer, .registerContainer, .addKeyboardContainer, .changePasswordContainer, .updateKeyboardContainer, .updateCategoryContainer, .keyboardDetailContainer, .myCartContainer {
+    background: #baafd1;
+    margin: auto;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 50px;
+}
+
+.tranHistDetContainer {
+    margin: auto;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 50px;
+    width: 85%;
+}
+
+.loginContainer, .registerContainer, .addKeyboardContainer, .changePasswordContainer {
+    width: 800px;
+}
+
+.updateKeyboardContainer, .updateCategoryContainer, .keyboardDetailContainer, .myCartContainer {
+    width: 900px;
+}
+
+.loginHeader, .registerHeader, .addKeyboardHeader, .changePasswordHeader, .updateKeyboardHeader, .updateCategoryHeader, .keyboardDetailHeader, .myCartHeader {
+    padding: 15px;
+    border-bottom: 1px solid grey;
+}
+
+.tranHistDetHeader {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.loginHeader p, .registerHeader p, .addKeyboardHeader p, .changePasswordHeader p, .updateKeyboardHeader p, .updateCategoryHeader p, .keyboardDetailHeader p, .myCartHeader p {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.login, .register, .addKeyboard, .changePassword, .updateKeyboard, .updateCategory, .keyboardDetail, .myCart, .tranHistDet {
+    padding: 25px;
+    text-align: center;
+}
+
+.myCart:not(:last-child) {
+    border-bottom: 1px solid grey;
+}
+
+.login table, .register table, .addKeyboard table, .changePassword table, .updateKeyboard table, .updateCategory table, .keyboardDetail table, .myCart table, .tranHistDet table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.login td, .register td, .addKeyboard td, .changePassword td, .updateKeyboard td, .updateCategory td, .keyboardDetail td, .myCart td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.tranHistDet table {
+    width: 100%;
+}
+
+.tranHistDet th {
+    border-top: 5px solid black;
+}
+
+.tranHistDet th, .tranHistDet td {
+    vertical-align: top;
+    text-align: left;
+    padding: 15px 15px;
+    border-bottom: 1px solid black;
+    width: 25%;
+}
+
+.tranHistDet tr:last-child {
+    border-bottom: 5px solid black;
+}
+
+.tranHistDet .grandTotal {
+    text-align: left;
+    font-weight: bold;
+}
+
+.keyboardDetail tr:nth-child(3) td {
+    padding-bottom: 20px;
+}
+
+.login #email_address, .login #password, .login #remember_me, .login button, .login span, .register #username, .register #email_address, .register #password, .register #confirm_password, .register #address, .register #gender_male, .register #birth_date, .register button, .register span, .addKeyboard #category_id, .addKeyboard #name, .addKeyboard #price, .addKeyboard #description, .addKeyboard #image, .addKeyboard button, .addKeyboard span, .changePassword #current_password, .changePassword #new_password, .changePassword #new_confirm_password, .changePassword span, .changePassword button, .updateKeyboard #category_id, .updateKeyboard #name, .updateKeyboard #price, .updateKeyboard #description, .updateKeyboard #image, .updateKeyboard button, .updateKeyboard span, .updateCategory #name, .updateCategory #image, .updateCategory button, .updateCategory span, .keyboardDetail #quantity, .keyboardDetail button, .keyboardDetail span, .myCart p, .myCart #quantity, .myCart button, .myCart span {
+    margin-left: 20px;
+}
+
+.login #email_address, .login #password, .register #username, .register #email_address, .register #password, .register #confirm_password, .register #address, .register #birth_date, .addKeyboard select, .addKeyboard #name, .addKeyboard #price, .addKeyboard #description, .changePassword #current_password, .changePassword #new_password, .changePassword #new_confirm_password, .updateKeyboard select, .updateKeyboard #name, .updateKeyboard #price, .updateKeyboard #description, .updateCategory #name, .keyboardDetail #quantity, .myCart #quantity {
+    width: 400px;
+    height: 35px;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.register #address, .addKeyboard #description, .updateKeyboard #description {
+    resize: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 85px;
+    vertical-align: middle;
+    font-family: inherit;
+}
+
+.login span, .register span, .addKeyboard span, .changePassword span, .updateKeyboard span, .updateCategory span, .keyboardDetail span, .myCart span {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.login .error, .register .error, .addKeyboard .error, .changePassword .error, .updateKeyboard .error, .updateCategory .error, .keyboardDetail .error, .myCart .error {
+    color: red;
+}
+
+.login .success, .addKeyboard .success, .changePassword .success, .keyboardDetail .success, .myCart .success {
+    color: green;
+}
+
+.login button, .register button, .addKeyboard button, .changePassword button, .updateKeyboard button, .updateCategory button, .keyboardDetail button, .myCart button {
+    background-color: #8d9cc9;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: white;
+}
+
+.login button:hover, .register button:hover, .addKeyboard button:hover, .changePassword button:hover, .updateKeyboard button:hover, .updateCategory button:hover, .keyboardDetail button:hover, .myCart button:hover {
+    background-color: #707b9c;
+}
+
+.updateKeyboard, .updateCategory, .keyboardDetail, .myCart {
+    display: flex;
+    justify-content: center;
+}
+
+.updateKeyboard .boxImage, .updateCategory .boxImage, .keyboardDetail .boxImage, .myCart .boxImage {
+    margin-right: 20px;
+}
+
+.updateKeyboard img, .updateCategory img, .keyboardDetail img, .myCart img, .tranHistDet img {
+    border: 1px solid grey;
+}
+
+/* Home, View Keyboard, Manage Category, Transaction History */
+.homeContainer, .viewKeyboardContainer, .manageCategoryContainer, .tranHistContainer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.homeContainer p, .tranHistContainer p {
+    margin-top: 5px;
+}
+
+.homeContainer h2 {
+    margin-top: 30px;
+}
+
+.homeContainer .home, .viewKeyboardContainer .viewKeyboard, .manageCategoryContainer .manageCategory {
+    display: flex;
+    /* So flex items will create a new row if too much on one row */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.home .boxOuter, .viewKeyboard .boxOuter, .manageCategory .boxOuter {
+    background: #baafd1;
+    padding: 7px;
+}
+
+.home .boxOuter, .manageCategory .boxOuter {
+    margin: 20px 20px;
+}
+
+.viewKeyboard .boxOuter {
+    margin-left: 20px;
+    margin-right: 20px;
+    /* To compesate for no margin-top: 20px */
+    margin-bottom: 40px;
+}
+
+.home .boxInner, .viewKeyboard .boxInner, .manageCategory .boxInner {
+    display: grid;
+    border: 1px solid grey;
+    /* So if there's any text too long, the box's width will remain the same */
+    max-width: min-content;
+}
+
+.home .boxInner a, .viewKeyboard .boxInner a, .viewKeyboard .boxInner p, .manageCategory .boxInner p {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.home .boxInner a, .viewKeyboard .boxInner a, .manageCategory .boxInner a, .manageCategory .boxInner p {
+    padding: 10px 20px;
+}
+
+.home .boxInner a, .viewKeyboard .boxInner a, .manageCategory .boxInner a {
+    color: #3535ff;
+    text-decoration: none;
+}
+
+.home .boxInner a:hover, .viewKeyboard .boxInner a:hover, .manageCategory .boxInner a:hover {
+    color: #8484ff;
+}
+
+.viewKeyboardContainer h1 {
+    margin: auto;
+    width: 90%;
+    background: #aee5de;
+}
+
+.viewKeyboard .boxInner p {
+    padding-bottom: 10px;
+    color: white;
+}
+
+.viewKeyboard .boxButton, .manageCategory .boxButton {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.viewKeyboard button, .manageCategory button {
+    background-color: #8d9cc9;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: white;
+    margin: 0 5px;
+}
+
+.viewKeyboard button:hover, .viewKeyboardSearchBar button:hover, .manageCategory button:hover {
+    background-color: #707b9c;
+}
+
+.viewKeyboard .boxButton .updateButton, .manageCategory .boxButton .updateButton {
+    background-color: #8d9cc9;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: white;
+    margin: 0 5px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.viewKeyboard .boxButton .updateButton:hover, .manageCategory .boxButton .updateButton:hover {
+    background-color: #707b9c;
+}
+
+.viewKeyboard .boxButton a:hover, .manageCategory .boxButton a:hover {
+    color: white;
+}
+
+.viewKeyboardBar {
+    display: flex;
+    margin: 20px 0;
+}
+
+.viewKeyboardPagination {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 5%;
+}
+
+.viewKeyboardPagination a, .viewKeyboardPagination p {
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.viewKeyboardPagination a {
+    color: #3535ff;
+}
+
+.viewKeyboardPagination a:hover {
+    color: #8484ff;
+}
+
+.viewKeyboardSearchBar {
+    text-align: left;
+    padding-left: 5%;
+}
+
+.viewKeyboardSearchBar button {
+    background-color: #8d9cc9;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: white;
+    margin: 0 5px;
+}
+
+.viewKeyboardSearchBar #search {
+    width: 300px;
+    height: 35px;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.viewKeyboardSearchBar span, .manageCategoryHeader span {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.viewKeyboardSearchBar .success, .manageCategoryHeader .success {
+    color: green;
+}
+
+.manageCategoryMessage {
+    text-align: center;
+    /* Same margin as: .home .boxOuter, .viewKeyboard .boxOuter */
+    margin-top: 20px;
+}
+
+.tranHist {
+    margin: 50px 0;
+}
+
+.tranHistContent {
+    margin-bottom: 40px;
+}
+
+.tranHistContent .detailButton {
+    background-color: white;
+    padding: 8px 40px;
+    border-radius: 3px;
+    color: #3535ff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.tranHistContent .detailButton:hover {
+    color: #8484ff;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background-color: white;
+    color: grey;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0 -5px 5px rgba(0,0,0,0.1);
+}
