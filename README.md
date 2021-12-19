@@ -37,7 +37,7 @@ View Keyboards page will show you all keyboards that are categorized as the one 
 This is how the View Keyboard page looks like if you were a manager. Managers can delete a keyboard by clicking on the delete button on the specific keyboard that they want to delete, doing this will bring up a prompt confirming if you really want to do this. Managers can also update a specific keyboard by clicking on the update keyboard button which will redirect them to the Update Keyboard page.
 
 # (6/18) Update Keyboard Page
-![](pic/7viewkeyboard(manager).jpg)
+![](pic/7updatekeyboard.jpg)
 Update Keyboard page is only accessible to manager. This page will show all of the data from the chosen keyboard and the manager can edit them by picking a new category, new name, price, description, or upload a new image for this keyboard. The manager input will be validated first before processed, most of them are usual validation such as fields cannot be empty, except the image field (which can be ignored), but one of the validations is that if nothing was changed and the manager pressed the update keyboard button, it will show an error that nothing was changed.
 
 # (7/18) Keyboard Detail Page (as Guest or Customer)
